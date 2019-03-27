@@ -52,4 +52,8 @@ class Pictures extends React.Component {
   }
 }
 
+function FileFinder() {
+  
+}
+
 export default App;
