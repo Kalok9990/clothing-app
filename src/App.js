@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
@@ -21,7 +21,13 @@ class App extends Component {
       //     </a>
       //   </header>
       // </div>
-      <NavigationBar />
+      <div>
+        <NavigationBar />
+        <div>
+          <h1 id="main_title">Clothing App</h1>
+          <Pictures />
+        </div>
+      </div>
     );
   }
 }
@@ -29,13 +35,19 @@ class App extends Component {
 class NavigationBar extends React.Component {
   render() {
     return(
-      <nav className="navigation_bar">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-        </ul>
+      <nav className="nav flex-column sidenav">
+        <a className="nav-item" href="#">Home</a>
+        <a className="nav-item" href="#">About</a>
+        <a className="nav-item" href="#">Products</a>
       </nav>
+    );
+  }
+}
+
+class Pictures extends React.Component {
+  render() {
+    return(
+      <img />
     );
   }
 }
